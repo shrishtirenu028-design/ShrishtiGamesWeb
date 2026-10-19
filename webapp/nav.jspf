@@ -1,0 +1,14 @@
+<%@ page pageEncoding="UTF-8" %>
+<div class="nav">
+  <a class="brand" href="${pageContext.request.contextPath}/home.jsp">ShrishtiGames</a>
+  <div>
+    <% if (session.getAttribute("username") != null) { %>
+      <span>Hi, <%= session.getAttribute("username") %></span>
+      <a href="${pageContext.request.contextPath}/home.jsp">Games</a>
+      <a href="${pageContext.request.contextPath}/logout">Log out</a>
+    <% } else { %>
+      <a href="${pageContext.request.contextPath}/login.jsp">Log in</a>
+      <a href="${pageContext.request.contextPath}/register.jsp">Register</a>
+    <% } %>
+  </div>
+</div>
